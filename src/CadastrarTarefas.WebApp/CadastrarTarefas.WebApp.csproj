@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>d6ab6e81-0d54-44e0-aeb7-987b13256201</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <ProjectReference Include="..\CadastrarTarefas.Core\CadastrarTarefas.Core.csproj" />
+    <ProjectReference Include="..\CadastrarTarefas.Services\CadastrarTarefas.Services.csproj" />
   </ItemGroup>
 
 </Project>
