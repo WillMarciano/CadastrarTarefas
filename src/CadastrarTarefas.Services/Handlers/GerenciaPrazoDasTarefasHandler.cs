@@ -9,7 +9,7 @@ namespace CadastrarTarefas.Services.Handlers
     {
         IRepositorioTarefas _repo;
 
-        public GerenciaPrazoDasTarefasHandler() => _repo = new RepositorioTarefa();
+        public GerenciaPrazoDasTarefasHandler(IRepositorioTarefas repo) => _repo = repo;
 
         public void Execute(GerenciaPrazoDasTarefas comando)
         {

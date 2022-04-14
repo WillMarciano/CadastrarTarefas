@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E866B68
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastrarTarefas.WebApp", "src\CadastrarTarefas.WebApp\CadastrarTarefas.WebApp.csproj", "{DF999E61-05A7-49ED-AAF8-791CD4064789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastrarTarefas.Testes", "tests\CadastrarTarefas.Testes\CadastrarTarefas.Testes.csproj", "{2A51B6E4-A367-490D-99FC-576B1BEE4B98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{DF999E61-05A7-49ED-AAF8-791CD4064789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF999E61-05A7-49ED-AAF8-791CD4064789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF999E61-05A7-49ED-AAF8-791CD4064789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A51B6E4-A367-490D-99FC-576B1BEE4B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A51B6E4-A367-490D-99FC-576B1BEE4B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A51B6E4-A367-490D-99FC-576B1BEE4B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A51B6E4-A367-490D-99FC-576B1BEE4B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{BFBC9D96-D1B3-4FE0-8563-52B4B11AC248} = {957C5898-4A27-48F2-BF62-362F71A1AA10}
 		{FFCA54F3-2505-4678-A726-68E55DE2C859} = {957C5898-4A27-48F2-BF62-362F71A1AA10}
 		{DF999E61-05A7-49ED-AAF8-791CD4064789} = {957C5898-4A27-48F2-BF62-362F71A1AA10}
+		{2A51B6E4-A367-490D-99FC-576B1BEE4B98} = {6E866B68-C98F-4A7A-A28E-777C7FF5049C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5737773D-E53C-4CD0-A547-7CDE0AB1E764}

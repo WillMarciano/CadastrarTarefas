@@ -10,9 +10,9 @@ namespace CadastrarTarefas.Services.Handlers
         IRepositorioTarefas _repo;
         ILogger<CadastraTarefaHandler> _logger;
 
-        public CadastraTarefaHandler()
+        public CadastraTarefaHandler(IRepositorioTarefas respositorio)
         {
-            _repo = new RepositorioTarefa();
+            _repo = respositorio;
             _logger = new LoggerFactory().CreateLogger<CadastraTarefaHandler>();
         }
 

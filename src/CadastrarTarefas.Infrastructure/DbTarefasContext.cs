@@ -9,6 +9,11 @@ namespace CadastrarTarefas.Infrastructure
 
         public DbTarefasContext() { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=");
+        }
+
         public DbSet<Tarefa> Tarefas { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
     }

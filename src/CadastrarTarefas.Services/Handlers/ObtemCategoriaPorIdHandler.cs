@@ -8,7 +8,8 @@ namespace CadastrarTarefas.Services.Handlers
     {
         IRepositorioTarefas _repo;
 
-        public ObtemCategoriaPorIdHandler() => _repo = new RepositorioTarefa();
+        public ObtemCategoriaPorIdHandler(IRepositorioTarefas repo) => _repo = repo;
+
         public Categoria Execute(ObtemCategoriaPorId comando) => _repo.ObtemCategoriaPorId(comando.IdCategoria);
     }
 }
