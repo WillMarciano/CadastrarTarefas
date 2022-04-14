@@ -2,6 +2,7 @@ using CadastrarTarefas.Core.Commands;
 using CadastrarTarefas.Core.Models;
 using CadastrarTarefas.Infrastructure;
 using CadastrarTarefas.Services.Handlers;
+using CadastrarTarefas.Testes.Configure;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -15,15 +16,10 @@ namespace CadastrarTarefas.Testes
         public void IncluiraDbAoValidarInformações()
         {
             //arrange
-            var comando = new CadastraTarefa("Estudar xUnit",
-                                            new Categoria("Estudo"),
-                                            new DateTime(2022, 04, 14));
+            var comando = new CadastraTarefa("Estudar xUnit", new Categoria("Estudo"), new DateTime(2022, 04, 14));
 
-            var contexto = new DbTarefasContext(new DbContextOptionsBuilder<DbTarefasContext>()
-                                                    .UseInMemoryDatabase("DbTarefas")
-                                                    .Options);
-            
-            var repo = new RepositorioTarefa(contexto);            
+
+            var repo = new RepositorioTarefa(Conexao.ContextoDbTeste("DbTarefas1"));
             //var repo = new RepositorioFake();
 
             var handler = new CadastraTarefaHandler(repo);
@@ -34,6 +30,7 @@ namespace CadastrarTarefas.Testes
             //assert
             var tarefa = repo.ObtemTarefas(t => t.Titulo == "Estudar xUnit").FirstOrDefault();
             Assert.NotNull(tarefa);
+
         }
     }
 }

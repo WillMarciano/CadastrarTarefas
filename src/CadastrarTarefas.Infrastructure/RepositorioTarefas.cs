@@ -7,10 +7,9 @@ namespace CadastrarTarefas.Infrastructure
 {
     public class RepositorioTarefa : IRepositorioTarefas
     {
-        private readonly DbTarefasContext _context;
+        readonly DbTarefasContext _context;
 
         public RepositorioTarefa(DbTarefasContext context) => _context = context;
-
         public void AtualizarTarefas(params Tarefa[] tarefas)
         {
             _context.Tarefas.UpdateRange(tarefas);

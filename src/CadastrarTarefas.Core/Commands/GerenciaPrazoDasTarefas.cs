@@ -5,6 +5,6 @@ namespace CadastrarTarefas.Core.Commands
     public class GerenciaPrazoDasTarefas
     {
         public DateTime DataHoraAtual { get; }
-        public GerenciaPrazoDasTarefas() => DataHoraAtual = DateTime.Now;
+        public GerenciaPrazoDasTarefas(DateTime dataHoraAtual) => DataHoraAtual = dataHoraAtual;
     }
 }
