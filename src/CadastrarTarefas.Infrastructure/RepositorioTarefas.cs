@@ -9,7 +9,7 @@ namespace CadastrarTarefas.Infrastructure
     {
         private readonly DbTarefasContext _context;
 
-        public RepositorioTarefa() => _context = new DbTarefasContext();
+        public RepositorioTarefa(DbTarefasContext context) => _context = context;
 
         public void AtualizarTarefas(params Tarefa[] tarefas)
         {

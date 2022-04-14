@@ -11,7 +11,8 @@ namespace CadastrarTarefas.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=");
+            if (!optionsBuilder.IsConfigured)
+                optionsBuilder.UseSqlServer("Server=");
         }
 
         public DbSet<Tarefa> Tarefas { get; set; }

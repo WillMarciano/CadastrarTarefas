@@ -1,6 +1,8 @@
 using CadastrarTarefas.Core.Commands;
 using CadastrarTarefas.Core.Models;
+using CadastrarTarefas.Infrastructure;
 using CadastrarTarefas.Services.Handlers;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using Xunit;
@@ -17,8 +19,12 @@ namespace CadastrarTarefas.Testes
                                             new Categoria("Estudo"),
                                             new DateTime(2022, 04, 14));
 
-
-            var repo = new RepositorioFake();
+            var contexto = new DbTarefasContext(new DbContextOptionsBuilder<DbTarefasContext>()
+                                                    .UseInMemoryDatabase("DbTarefas")
+                                                    .Options);
+            
+            var repo = new RepositorioTarefa(contexto);            
+            //var repo = new RepositorioFake();
 
             var handler = new CadastraTarefaHandler(repo);
 
