@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\CadastrarTarefas.Core\CadastrarTarefas.Core.csproj" />
     <ProjectReference Include="..\..\src\CadastrarTarefas.Services\CadastrarTarefas.Services.csproj" />
+    <ProjectReference Include="..\..\src\CadastrarTarefas.WebApp\CadastrarTarefas.WebApp.csproj" />
   </ItemGroup>
 
 </Project>

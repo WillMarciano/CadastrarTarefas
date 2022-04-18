@@ -1,7 +1,6 @@
-﻿using CadastrarTarefas.Infrastructure;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace CadastrarTarefas.Testes.Configure
+namespace CadastrarTarefas.Infrastructure.Extensions
 {
     public static class Conexao
     {
@@ -11,7 +10,9 @@ namespace CadastrarTarefas.Testes.Configure
                                         .UseInMemoryDatabase(banco)
                                         .Options;
 
-            return new DbTarefasContext(option);
+            var contexto = new DbTarefasContext(option);
+
+            return contexto;
         }
     }
 }

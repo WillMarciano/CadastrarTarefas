@@ -1,8 +1,8 @@
 using CadastrarTarefas.Core.Commands;
 using CadastrarTarefas.Core.Models;
 using CadastrarTarefas.Infrastructure;
+using CadastrarTarefas.Infrastructure.Extensions;
 using CadastrarTarefas.Services.Handlers;
-using CadastrarTarefas.Testes.Configure;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
@@ -19,8 +19,6 @@ namespace CadastrarTarefas.Testes
         {
             //arrange
             var comando = new CadastraTarefa("Estudar xUnit", new Categoria("Estudo"), new DateTime(2022, 04, 14));
-
-
             var repo = new RepositorioTarefa(Conexao.ContextoDbTeste("DbTarefas1"));
             //var repo = new RepositorioFake();
 

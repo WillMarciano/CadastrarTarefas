@@ -1,9 +1,8 @@
 using CadastrarTarefas.Core.Commands;
 using CadastrarTarefas.Core.Models;
 using CadastrarTarefas.Infrastructure;
+using CadastrarTarefas.Infrastructure.Extensions;
 using CadastrarTarefas.Services.Handlers;
-using CadastrarTarefas.Testes.Configure;
-using Microsoft.EntityFrameworkCore;
 using Moq;
 using System;
 using System.Collections.Generic;
