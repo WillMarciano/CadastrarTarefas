@@ -11,10 +11,10 @@ namespace CadastrarTarefas.Services.Handlers
         IRepositorioTarefas _repo;
         ILogger<CadastraTarefaHandler> _logger;
 
-        public CadastraTarefaHandler(IRepositorioTarefas respositorio)
+        public CadastraTarefaHandler(IRepositorioTarefas respositorio, ILogger<CadastraTarefaHandler> logger)
         {
             _repo = respositorio;
-            _logger = new LoggerFactory().CreateLogger<CadastraTarefaHandler>();
+            _logger = logger;
         }
 
         public CommandResult Execute(CadastraTarefa comando)
@@ -34,8 +34,9 @@ namespace CadastrarTarefas.Services.Handlers
                 _repo.IncluirTarefas(tarefa);
                 return new CommandResult(true);
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                _logger.LogError(e, e.Message);
                 return new CommandResult(false);
             }
 
